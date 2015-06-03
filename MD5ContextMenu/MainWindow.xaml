@@ -1,0 +1,26 @@
+﻿<Window x:Class="MD5ContextMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:MD5ContextMenu.ViewModel"
+        xmlns:extToolkit="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        Title="{Binding Path=DisplayName}" Height="565.79" Width="827.631">
+    <Grid>
+        <DataGrid Margin="10,36,10,37"/>
+        <Button Command="{Binding Path=CloseCommand}" Content="_Close" Margin="0,0,10,10" HorizontalAlignment="Right" Width="75" Height="22" VerticalAlignment="Bottom" IsCancel="True" ToolTip="Close this window"/>
+        <Label Content="Result label" Margin="10,0,264,11" Height="26" VerticalAlignment="Bottom" ToolTip="Total checksum result"/>
+        <Button Command="{Binding Path=ClearCommand}" Content="Clea_r" HorizontalAlignment="Left" Margin="90,9,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding Path=ExportCommand}" Content="E_xport" HorizontalAlignment="Left" Margin="170,9,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+        <extToolkit:DropDownButton Content="Add" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Height="21">
+            <extToolkit:DropDownButton.DropDownContent>
+                <StackPanel >
+                    <MenuItem Header="First file"/>
+                    <MenuItem Header="Second file"/>
+                </StackPanel>
+            </extToolkit:DropDownButton.DropDownContent>
+        </extToolkit:DropDownButton>
+
+
+    </Grid>
+</Window>
